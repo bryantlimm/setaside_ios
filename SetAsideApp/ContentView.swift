@@ -21,13 +21,24 @@ struct ContentView: View {
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                 
-                Text("We Set them aside for you!")
-//                    .font(.title)
-                    .font(.system(size: 40, weight: .bold))
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    .foregroundColor(.white)
+                VStack(spacing: 16) {
+                    Text("We Set them aside for you!")
+                        .font(.system(size: 40, weight: .bold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .foregroundColor(.white)
+                    
+                    Text("Shopping made easy with SetAside")
+                        .font(.subheadline)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal)
+                        .foregroundColor(.white)
+                    
+                    SignUpContent()
+                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                            .background(Color.white)
+                }
+                
                 Spacer()
             }
         }
@@ -37,3 +48,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
